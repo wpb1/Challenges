@@ -1,6 +1,9 @@
+//Challenges for Day 1
+
 import Debug "mo:base/Debug";
 import Array "mo:base/Array";
 import Nat "mo:base/Nat";
+
 actor {
 
   //Challenge 1: Write a function add that takes two natural numbers n and m and 
@@ -84,12 +87,15 @@ actor {
     };
     return(n);
   };
+  
+  //this solution makes use of the Array method from the Mokoto code base
   public func max_in_array2 (listofnumbers : [Nat]) : async Nat {
     var newarray : [Nat] = Array.sort(listofnumbers, Nat.compare);
     var arraysize : Nat = listofnumbers.size()-1;
     return (newarray[arraysize]);
   };
-
+  
+  //this is just test code from the daily guide
   let array : [Nat] = [1,2,3,4,5];
   public func test() : async () {
       for (value in array.vals()){
